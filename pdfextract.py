@@ -5,13 +5,14 @@ import collections
 import numpy as np
 import spacy
 from spacy.matcher import Matcher
+from 
 
-text = textract.process("HULK NDIS Plan-3.pdf")
-print(text)
-
-nlp = spacy.load('en')
-content = text.decode('cp1252')
-doc = nlp(content)
+def extract_pdf()
+    text = textract.process("HULK NDIS Plan-3.pdf")
+    print(text)
+    nlp = spacy.load('en')
+    content = text.decode('cp1252')
+    doc = nlp(content)
 
 def get_det_dict():
     dict = collections.defaultdict(list)
